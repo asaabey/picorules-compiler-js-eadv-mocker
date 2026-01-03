@@ -1,0 +1,56 @@
+{
+  "name": "picorules-compiler-js-eadv-mocker",
+  "version": "0.1.0",
+  "description": "Mock EADV data generator for Picorules testing - generates synthetic clinical data based on compiled ruleblocks",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsup src/index.ts --format cjs,esm --dts --clean",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "test:coverage": "vitest run --coverage",
+    "lint": "eslint src/**/*.ts",
+    "type-check": "tsc --noEmit",
+    "clean": "rm -rf dist"
+  },
+  "keywords": [
+    "picorules",
+    "eadv",
+    "mock",
+    "testing",
+    "clinical",
+    "data-generator"
+  ],
+  "author": "asaabey",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/asaabey/picorules-compiler-js-eadv-mocker.git"
+  },
+  "bugs": {
+    "url": "https://github.com/asaabey/picorules-compiler-js-eadv-mocker/issues"
+  },
+  "homepage": "https://github.com/asaabey/picorules-compiler-js-eadv-mocker#readme",
+  "dependencies": {
+    "picorules-compiler-js-core": "^1.0.4"
+  },
+  "devDependencies": {
+    "typescript": "^5.3.0",
+    "vitest": "^1.0.0",
+    "@vitest/coverage-v8": "^1.0.0",
+    "tsup": "^8.0.0"
+  }
+}
