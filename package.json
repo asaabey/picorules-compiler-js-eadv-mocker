@@ -1,6 +1,6 @@
 {
   "name": "picorules-compiler-js-eadv-mocker",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "Mock EADV data generator for Picorules testing - generates synthetic clinical data based on compiled ruleblocks",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
